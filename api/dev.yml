@@ -1,0 +1,20 @@
+version: "3.8"
+services:
+  database:
+    image: postgis/postgis:12-3.0-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: clubby_api
+    ports:
+      - 5432:5432
+    volumes:
+      - ./db:/var/lib/postgresql/data/
+
+  redis:
+    image: redis:6-alpine
+    volumes:
+      - ./redis:/data
+    ports:
+      - 6379:6379
+    command: ["redis-server", "--appendonly", "yes"]

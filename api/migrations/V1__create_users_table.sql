@@ -1,0 +1,10 @@
+CREATE TABLE IF NOT EXISTS users (
+  id BIGSERIAL PRIMARY KEY,
+  name VARCHAR NOT NULL,
+  phone VARCHAR NOT NULL,
+  photo VARCHAR,
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT (NOW() AT TIME ZONE 'utc'),
+  city_id INTEGER NOT NULL
+);
+
+CREATE UNIQUE INDEX users_phone ON users (phone);

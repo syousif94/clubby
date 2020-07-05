@@ -1,0 +1,34 @@
+[package]
+name = "clubby"
+version = "0.1.0"
+authors = ["Sammy Yousif <syousif@utexas.edu>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+warp = "0.2"
+mobc = "0.5"
+hyper = "0.13"
+reqwest = { version = "0.10", features = ["json"] }
+tokio = { version = "0.2", features = ["macros", "full"] }
+tokio-postgres = "0.5"
+jsonwebtoken = "7"
+chrono = { version = "0.4", features = ["serde"] }
+mobc-postgres = { version = "0.5", features = ["with-chrono-0_4"] }
+mobc-redis = "0.5"
+dotenv = "0.11"
+refinery =  { version = "0.3.0", features = ["tokio-postgres"] }
+env_logger = "0.6"
+lazy_static = "1.4"
+listenfd = "0.3"
+log = "0.4"
+serde = {version = "1.0", features = ["derive"] }
+serde_derive = "1.0"
+serde_json = "1.0"
+rusoto_core = "0.44.0"
+rusoto_sns = "0.44.0"
+rusoto_credential = "0.44.0"
+rand = "0.7"
+percent-encoding = "2.1.0"
+postgis = "0.7.0"

@@ -1,0 +1,13 @@
+{
+  "name": "dev-proxy",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "devcert": "1.1.0",
+    "http-proxy": "^1.18.1"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}
